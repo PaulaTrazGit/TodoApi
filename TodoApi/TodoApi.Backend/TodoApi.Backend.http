@@ -1,0 +1,6 @@
+@TodoApi.Backend_HostAddress = http://localhost:8080
+
+GET {{TodoApi.Backend_HostAddress}}/TodoApi/
+Accept: application/json
+
+###

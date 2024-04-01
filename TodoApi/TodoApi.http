@@ -1,0 +1,53 @@
+### Criar um novo usuário
+
+POST {{TodoApi_HostAddress}}/api/usuario
+Content-Type: application/json
+
+{
+    "nome": "Exemplo",
+    "login": "exemplo@exemplo.com",
+    "senha": "senha123",
+    "email": "exemplo@exemplo.com"
+}
+
+### Obter todos os usuários
+
+GET {{TodoApi_HostAddress}}/api/usuario
+
+### Criar uma nova tarefa
+
+POST {{TodoApi_HostAddress}}/api/tarefa
+Content-Type: application/json
+
+{
+    "titulo": "Nova tarefa",
+    "descricao": "Descrição da nova tarefa",
+    "dataCriacao": "2024-03-31T12:00:00",
+    "usuarioId": "123e4567-e89b-12d3-a456-426614174000"
+}
+
+### Obter todas as tarefas
+
+GET {{TodoApi_HostAddress}}/api/tarefa
+
+### Obter uma tarefa por ID
+
+GET {{TodoApi_HostAddress}}/api/tarefa/1
+
+### Atualizar uma tarefa existente
+
+PUT {{TodoApi_HostAddress}}/api/tarefa/1
+Content-Type: application/json
+
+{
+    "id": "1",
+    "titulo": "Tarefa atualizada",
+    "descricao": "Descrição da tarefa atualizada",
+    "dataCriacao": "2024-03-31T12:00:00",
+    "dataConclusao": null,
+    "usuarioId": "123e4567-e89b-12d3-a456-426614174000"
+}
+
+### Excluir uma tarefa existente
+
+DELETE {{TodoApi_HostAddress}}/api/tarefa/1
